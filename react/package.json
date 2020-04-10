@@ -42,7 +42,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "prettier": "prettier --write ./src/**/*.{ts,js,css,html,scss,json}",
-    "lint-fix": "tslint --fix"
+    "lint-fix": "tslint --project . --fix"
   },
   "repository": {
     "type": "git",
