@@ -5,7 +5,7 @@ import Header from './header';
 import './layout.css';
 
 interface LayoutProps {
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -30,11 +30,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   );
