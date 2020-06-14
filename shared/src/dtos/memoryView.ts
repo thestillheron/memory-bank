@@ -1,5 +1,7 @@
 import { Significance } from './../constants/significance';
-export interface Memory {
+import { Tag } from "./../models/tag";
+import { Person } from "./../models/person";
+export interface MemoryView {
   id: string;
   title: string;
   content: string;
@@ -7,4 +9,6 @@ export interface Memory {
   year?: string;
   month?: string;
   day?: string;
+  people: Person[];
+  tags: Tag[];
 }
