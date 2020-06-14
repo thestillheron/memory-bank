@@ -3,7 +3,6 @@ import { TextField, Button } from '@material-ui/core';
 
 import Layout from '../components/layout';
 import { Memory, NewPerson, NewTag } from '../model';
-import PeopleList from '../components/peopleList';
 import FreeTextList from '../components/freeTextList';
 
 const IndexPage = () => {

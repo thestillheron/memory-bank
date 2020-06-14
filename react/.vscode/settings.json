@@ -1,0 +1,20 @@
+{
+  "editor.formatOnSave": true,
+  "tslint.configFile": "./tslint.json",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#028a3b",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveBackground": "#005f28",
+    "activityBarBadge.background": "#bf0060",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#028a3b",
+    "titleBar.inactiveBackground": "#005f28",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#036e30",
+    "statusBarItem.hoverBackground": "#3399ff",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#007fff",
+  "typescript.tsdk": "./node_modules/.bin/tsc"
+}

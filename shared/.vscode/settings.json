@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "tslint.configFile": "./tslint.json",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#c13aff",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#bf0060",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#c13aff",
+    "titleBar.inactiveBackground": "#c13aff99",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#c13aff",
+    "statusBarItem.hoverBackground": "#c74eff",
+    "statusBar.foreground": "#e7e7e7"
+  }
+}
