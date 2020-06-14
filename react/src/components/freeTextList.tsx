@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import { TAB, ENTER } from '../keyCodes';
-import { arrayOf } from 'prop-types';
 
 export interface FreeTextListProps {
   items: string[];
-  update: (items: string[]) => void;
-  suggest: (text: string) => Promise<string | undefined>;
+  onChange: (items: string[]) => void;
+  // suggest: (text: string) => Promise<string | undefined>;
+  placeholder?: string;
 }
 
-const FreeTextList: React.FC<FreeTextListProps> = ({ items, update }) => {
+const FreeTextList: React.FC<FreeTextListProps> = ({
+  items,
+  onChange,
+  placeholder,
+}) => {
   const [currentItem, setCurrentItem] = useState<string | undefined>();
   const handleShortcuts = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.keyCode === TAB) {
       // select the suggestion
     } else if (event.keyCode === ENTER) {
-      if (currentItem) update([...items, currentItem]);
+      if (currentItem) onChange([...items, currentItem]);
       setCurrentItem(undefined);
     }
   };
@@ -31,6 +35,7 @@ const FreeTextList: React.FC<FreeTextListProps> = ({ items, update }) => {
         value={currentItem}
         onChange={(e) => setCurrentItem(e.target.value)}
         onKeyDown={(e) => handleShortcuts(e)}
+        placeholder={placeholder}
       />
     </div>
   );

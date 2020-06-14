@@ -4,9 +4,9 @@ import { TextField, Button } from '@material-ui/core';
 import Layout from '../components/layout';
 import { Memory, NewPerson, NewTag } from '../model';
 import PeopleList from '../components/peopleList';
+import FreeTextList from '../components/freeTextList';
 
 const IndexPage = () => {
-  const thingo = '';
   const [memories, setMemories] = useState<Memory[]>([]);
   const [title, setTitle] = useState<string | undefined>();
   const [content, setContent] = useState<string | undefined>();
@@ -14,7 +14,9 @@ const IndexPage = () => {
   const [month, setMonth] = useState<string | undefined>();
   const [day, setDay] = useState<string | undefined>();
   const [people, setPeople] = useState<NewPerson[]>([]);
+  const [peopleStrings, setPeopleStrings] = useState<string[]>([]);
   const [tags, setTags] = useState<NewTag[]>([]);
+  const [tagStrings, setTagStrings] = useState<string[]>([]);
 
   const submit = () => {};
 
@@ -48,15 +50,15 @@ const IndexPage = () => {
           onChange={(e) => setDay(e.target.value)}
           label="Day (Ctrl+D)"
         />
-        <PeopleList
-          people={people}
-          onChange={(e) => setPeople(e.target.value)}
-          label="People (Ctrl+P)"
+        <FreeTextList
+          items={peopleStrings}
+          onChange={(items) => setPeopleStrings(items)}
+          placeholder="People (Ctrl+P)"
         />
-        <TextField
-          value={tags}
-          onChange={(e) => setTags(e.target.value)}
-          label="Tags (Ctrl+T)"
+        <FreeTextList
+          items={tagStrings}
+          onChange={(items) => setTagStrings(items)}
+          placeholder="Tags (Ctrl+T)"
         />
         <Button onClick={() => submit()} />
       </form>
